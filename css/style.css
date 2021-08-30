@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/*menu*/
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 4rem;
+  background-color: rgb(77, 77, 92);
+  padding: 0 50px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+  height: 64px;
+  margin-left: 4rem;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+.mostrar-menu,
+.ocultar-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.mostrar-menu {
+  order: 1;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.ocultar-menu:hover {
+  color: #6cc091;
+}
+#check {
+  display: none;
+}
+
+/*banner*/
+.banner {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 4rem;
+}
+.video {
+  z-index: -1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 729px;
+  object-fit: cover;
+  overflow-y: hidden;
+}
+.banner-contenido {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8rem;
+}
+.banner-contenido h2 {
+  color: rgb(77, 77, 92);
+  font-size: 3.5rem;
+}
+.banner-contenido a {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  text-decoration: none;
+  align-self: baseline;
+  background-color: rgb(77, 77, 92, 1);
+  padding: 0.7rem;
+  border-radius: 3px;
+}
+.banner::before {
+  content: "";
+  background-color: rgba(88, 54, 121, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh-64px);
+}
+.banner-contenido a:hover {
+  color: #6cc091;
+  cursor: pointer;
+}
+/*ponencias*/
+.titulo {
+  justify-self: center;
+  font-size: 2rem;
+  margin: 2.5rem 0;
+}
+.titulo h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.ponencias {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1rem;
+  grid-template-areas: "title title";
+  padding: 2rem 4rem;
+}
+.ponencias .titulo {
+  grid-area: title;
+}
+.ponencia {
+  background-image: linear-gradient(
+    to right,
+    rgba(77, 77, 92, 1),
+    rgba(77, 77, 92, 0.5),
+    rgba(77, 77, 92, 0.25)
+  );
+  border-radius: 5px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem 1rem;
+}
+/*imganes de ponentes y ponencias*/
+.img-ponente {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  grid-column: 1/2;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+.ponencia .datos {
+  grid-column: 2/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.datos h2 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px -2px rgba(0, 100, 255, 0.4);
+}
+.datos h3 {
+  font-size: 1.3rem;
+}
+.datos p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 5px;
+}
+/*ponentes*/
+.ponentes {
+  background-color: rgb(100, 101, 104);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1rem;
+  padding: 2rem 3.5rem;
+}
+.ponentes .titulo {
+  grid-column: 1/-1;
+}
+.ponente {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ponente .img-ponente {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+.ponente h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+p {
+  text-align: justify;
+}
+/*team*/
+.equipo {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4rem;
+}
+.equipo .titulo {
+  grid-column: 1/-1;
+}
+.integrante {
+  background-image: linear-gradient(
+    to right,
+    rgb(141, 117, 172),
+    rgba(141, 117, 172, 0.8),
+    rgba(141, 117, 172, 0.6)
+  );
+  border-radius: 5px;
+  justify-self: center;
+  display: flex;
+  padding: 2rem;
+}
+.integrante .img {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #4d4d5c;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+.integrante .datos h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+/*responsive*/
+/*tablet*/
+@media screen and (max-width: 960px) {
+  .titulo h2 {
+    font-size: 2rem;
+  }
+  .ponencia {
+    display: flex;
+    flex-direction: column;
+  }
+  /*ponentes*/
+  .ponentes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1.8rem 3rem;
+  }
+  .ponente {
+    padding: 0.5rem 1.8rem;
+  }
+  .ponente .img-ponente {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 0.7rem;
+  }
+  .ponente h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  /*team*/
+  .equipo {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  /*header*/
+  .header {
+    height: 3rem;
+  }
+  .logo {
+    margin-left: 0.5rem;
+  }
+  .mostrar-menu,
+  .ocultar-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #4d4d5c;
+    top: 0;
+    right: -100%;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 2000;
+    transition: 0.3s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .ocultar-menu {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  /*hasta acá el menu*/
+  /*baner*/
+  .banner {
+    top: 3rem;
+  }
+  .video {
+    height: 100vh;
+  }
+  .banner-contenido {
+    padding-left: 2rem;
+  }
+  .banner-contenido h2 {
+    font-size: 1.8rem;
+  }
+  .banner-contenido a {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+  /*fin banner*/
+  /*ponencias*/
+  .ponencias {
+    margin-top: 2.5rem;
+    padding: 2rem;
+  }
+  .ponencias .titulo h2 {
+    font-size: 1.7rem;
+  }
+  .ponencia {
+    grid-column: 1/-1;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  .ponencia .img-ponente {
+    width: 120px;
+    height: 120px;
+    flex-direction: column;
+  }
+  .ponencia .datos h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+  .ponencia .datos h3 {
+    font-size: 1.1rem;
+  }
+  .datos p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+
+  /*ponentes*/
+  .ponentes .titulo h2 {
+    font-size: 1.7rem;
+  }
+  .ponente {
+    padding: 2rem;
+  }
+  .ponente .img-ponente {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1rem;
+  }
+  .ponente h2 {
+    font-size: 1.5rem;
+  }
+  .ponente p {
+    font-size: 1rem;
+  }
+  /*team*/
+  .equipo {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+  }
+}
+/*movil*/
+@media screen and (max-width: 510px) {
+  /*header*/
+  .header {
+    height: 2.5rem;
+  }
+  .logo {
+    margin-left: 0rem;
+  }
+  /*baner*/
+  .banner {
+    top: 2.5rem;
+  }
+  .video {
+    height: 100vh;
+  }
+  .banner-contenido {
+    padding-left: 2rem;
+  }
+  .banner-contenido h2 {
+    font-size: 1rem;
+  }
+  .banner-contenido a {
+    font-size: 0.5rem;
+    padding: 0.5rem;
+  }
+  /*fin banner*/
+  /*ponencias*/
+  .ponencias .titulo h2 {
+    font-size: 1.3rem;
+  }
+  .ponencias {
+    margin-top: 20px;
+  }
+  .ponencia .datos h2 {
+    font-size: 1rem;
+  }
+  .ponencia .datos h3 {
+    font-size: 0.7rem;
+  }
+  .ponencia .datos p {
+    font-size: 0.8rem;
+  }
+  /*ponenetes*/
+  .ponentes .titulo h2 {
+    font-size: 1.3rem;
+  }
+  .ponentes {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  .ponente {
+    padding: 1rem;
+  }
+  .ponente .img-ponente {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1rem;
+  }
+  .ponente h2 {
+    font-size: 1rem;
+  }
+  .ponente p {
+    font-size: 00.8rem;
+  }
+  /*team*/
+  .equipo {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+  }
+}
