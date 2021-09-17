@@ -11,9 +11,16 @@
   z-index: 100;
   width: 100vw;
   height: 4rem;
-  background-color: rgb(77, 77, 92);
+  background-image: linear-gradient(
+          to left,
+          rgba(55,95, 140, 1),
+          rgba(55,95, 140, 0.75),
+          rgba(110,198, 216, 0.5),
+          rgba(110, 198, 216, 0.25)
+  );
+  background-color: rgb(55, 95, 140, 55);
   padding: 0 50px;
-  color: #fff;
+  color: #37598c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,15 +30,16 @@
   height: 100px;
   margin-left: 4rem;
   margin-top: -10px;
-  background-image: url(../img/logo.png);
+  background-image: url(../img/LogoNegro.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 60%;
 }
 .menu a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 10px;
+  font-weight: bold;
 }
 .mostrar-menu,
 .ocultar-menu {
@@ -45,7 +53,7 @@
 .menu a:hover,
 .mostrar-menu:hover,
 .ocultar-menu:hover {
-  color: #6cc091;
+  color: #6EC6D8;
 }
 #check {
   display: none;
@@ -91,7 +99,7 @@
   font-size: 1.8rem;
   text-decoration: none;
   align-self: baseline;
-  background-color: rgb(77, 77, 92, 1);
+  background-color: rgb(55, 95, 140, 55);
   padding: 0.7rem;
   border-radius: 3px;
 }
@@ -105,7 +113,7 @@
   height: calc(100%-729px);
 }*/
 .banner-contenido a:hover {
-  color: #6cc091;
+  color: #6EC6D8;
   cursor: pointer;
 }
 /*ponencias*/
@@ -133,9 +141,10 @@
 .ponencia {
   background-image: linear-gradient(
     to right,
-    rgba(77, 77, 92, 1),
-    rgba(77, 77, 92, 0.5),
-    rgba(77, 77, 92, 0.25)
+    rgba(55,95, 140, 1),
+    rgba(55,95, 140, 0.75),
+    rgba(110,198, 216, 0.5),
+    rgba(110, 198, 216, 0.25)
   );
   border-radius: 5px;
   display: grid;
@@ -177,7 +186,14 @@
 }
 /*ponentes*/
 .ponentes {
-  background-color: rgb(100, 101, 104);
+  background-image: linear-gradient(
+          to bottom,
+          rgba(170,205, 240, 1),
+          /*rgba(206,170, 240, 0.75),*/
+          rgba(170,205, 240, 0.5),
+          rgba(170, 240, 240, 0.25)
+  );
+  /*background-color: rgb(194, 194, 194);*/
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,7 +242,7 @@ p {
 }
 .integrante {
   background-image: linear-gradient(
-    to right,
+    to bottom,
     rgba(77, 77, 92, 0.5),
     rgba(77, 77, 92, 0.25)
   );
@@ -253,11 +269,16 @@ p {
 /*auspiciadores*/
 .auspiciadores {
   width: 100%;
-  background-color: #646568;
-  padding: 2rem;
+  background-image: linear-gradient(
+          to bottom,
+          rgba(77, 77, 92, 0.5),
+          rgba(77, 77, 92, 0.25)
+  );
+  /*background-color: #646568;*/
+  padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 1rem;
+  /*margin-bottom: 0rem;*/
 }
 .auspiciadores h2 {
   grid-column: 1/-1;
