@@ -2,8 +2,12 @@
   margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
+  /*ruluko*/
   box-sizing: border-box;
   overflow-x: hidden;
+}
+body {
+  background-color: #e7e8e9;
 }
 /*menu*/
 .header {
@@ -11,12 +15,13 @@
   z-index: 100;
   width: 100vw;
   height: 4rem;
-  background-color: rgb(77, 77, 92);
+  background-color: #37589c;
   padding: 0 50px;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .logo {
   width: 200px;
@@ -45,12 +50,11 @@
 .menu a:hover,
 .mostrar-menu:hover,
 .ocultar-menu:hover {
-  color: #6cc091;
+  color: #6893e8;
 }
 #check {
   display: none;
 }
-
 /*banner*/
 .banner {
   width: 100vw;
@@ -91,21 +95,12 @@
   font-size: 1.8rem;
   text-decoration: none;
   align-self: baseline;
-  background-color: rgb(77, 77, 92, 1);
+  background-color: #14284f;
   padding: 0.7rem;
   border-radius: 3px;
 }
-/*.banner::before {
-  content: "";
-  background-color: rgba(133, 69, 196, 0.5);
-  position: absolute;
-  top: -4rem;
-  left: 0;
-  width: 100%;
-  height: calc(100%-729px);
-}*/
 .banner-contenido a:hover {
-  color: #6cc091;
+  color: #6893e8;
   cursor: pointer;
 }
 /*ponencias*/
@@ -115,6 +110,7 @@
   margin: 2.5rem 0;
 }
 .titulo h2 {
+  color: #0089e0;
   text-transform: uppercase;
   font-size: 2.5rem;
 }
@@ -125,35 +121,34 @@
   grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "title title";
-  padding: 2rem 4rem;
+  padding: 2rem 8rem;
 }
 .ponencias .titulo {
   grid-area: title;
 }
 .ponencia {
-  background-image: linear-gradient(
-    to right,
-    rgba(77, 77, 92, 1),
-    rgba(77, 77, 92, 0.5),
-    rgba(77, 77, 92, 0.25)
-  );
+  background-color: #fff;
   border-radius: 5px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 2fr;
   padding: 2rem 1rem;
+  box-shadow: 4px 4px 10px #888888;
 }
 /*imganes de ponentes y ponencias*/
 .img-ponente {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  align-self: center;
   display: flex;
   margin: 0 auto;
   grid-column: 1/2;
   border: 4px solid #fff;
   overflow: hidden;
+  box-shadow: 4px 4px 10px #888888;
 }
+
 .ponencia .datos {
   grid-column: 2/-1;
   display: flex;
@@ -163,9 +158,9 @@
 }
 .datos h2 {
   text-transform: uppercase;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  text-shadow: 1px -2px rgba(0, 100, 255, 0.4);
+  color: #9c7c36;
 }
 .datos h3 {
   font-size: 1.3rem;
@@ -174,16 +169,17 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-top: 5px;
+  color: #676768;
 }
 /*ponentes*/
 .ponentes {
-  background-color: rgb(100, 101, 104);
+  background-color: rgba(184, 185, 189, 0.5);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
-  padding: 2rem 3.5rem;
+  padding: 2rem 8rem;
 }
 .ponentes .titulo {
   grid-column: 1/-1;
@@ -218,18 +214,14 @@ p {
   width: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 4rem 8rem;
 }
 .equipo .titulo {
   grid-column: 1/-1;
 }
 .integrante {
-  background-image: linear-gradient(
-    to right,
-    rgba(77, 77, 92, 0.5),
-    rgba(77, 77, 92, 0.25)
-  );
+  background-color: #fff;
   width: 100%;
   border-radius: 5px;
   display: flex;
@@ -237,39 +229,44 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  box-shadow: 2px 2px 5px #888888;
 }
 .integrante .img {
   width: 100px;
   height: 100px;
   border: 4px solid #fff;
   border-radius: 50%;
-  margin: 0 1rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 10px #888888;
+}
+.integrante .datos {
+  font-family: "Open Sans", sans-serif;
 }
 .integrante .datos h2 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  text-transform: none;
 }
 /*auspiciadores*/
 .auspiciadores {
   width: 100%;
-  background-color: #646568;
-  padding: 2rem;
+  padding: 2rem 5rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 1rem;
 }
 .auspiciadores h2 {
   grid-column: 1/-1;
   justify-self: center;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 .auspiciadores .img {
   justify-self: center;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
-  margin: 2rem 2rem 0;
+  margin: 2rem 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -295,48 +292,35 @@ p {
 }
 /*footer*/
 .footer {
-  background-color: rgb(48, 45, 45);
+  background-color: #14284fda;
   color: #fff;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
   padding: 1.5rem 10rem;
 }
-.menu-footer {
-  justify-self: center;
-}
-.menu-footer a {
-  justify-self: center;
-  display: block;
-  padding: 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-}
-.menu-footer a:hover,
-.red-social i:hover {
-  color: #6cc091;
-}
 .red-social {
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
 .red-social a {
   text-decoration: none;
   color: #fff;
 }
 .red-social i {
-  display: block;
+  display: inline-block;
   padding: 0.5rem;
   font-size: 2rem;
 }
+.red-social i:hover {
+  color: #6893e8;
+  font-size: 2.3rem;
+}
 /*responsive*/
 /*tablet*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
   .titulo h2 {
     font-size: 2rem;
+  }
+  .ponencias {
+    padding: 2rem 3rem;
   }
   .ponencia {
     display: flex;
@@ -367,7 +351,16 @@ p {
   }
   /*auspiciadores*/
   .auspiciadores {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+  }
+
+  .auspiciadores h2 {
+    font-size: 1.8rem;
+  }
+  .auspiciadores .img {
+    width: 100px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -428,7 +421,7 @@ p {
   /*ponencias*/
   .ponencias {
     margin-top: 2.5rem;
-    padding: 2rem;
+    padding: 2rem 6rem;
   }
   .titulo h2 {
     font-size: 1.7rem;
@@ -490,7 +483,7 @@ p {
   }
   /*footer*/
   .footer {
-    padding: 1.5rem 10rem;
+    padding: 1rem 4rem;
   }
   .red-social i {
     display: block;
@@ -572,7 +565,7 @@ p {
   }
   /*team*/
   .equipo {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
   }
   .equipo .datos h2 {
@@ -581,9 +574,16 @@ p {
   .auspiciadores {
     grid-template-columns: repeat(2, 1fr);
   }
+  .auspiciadores h2 {
+    font-size: 1.3rem;
+  }
   .auspiciadores .img {
     width: 80px;
     height: 80px;
+  }
+  .footer {
+    padding: 0;
+    font-size: 0.7rem;
   }
   .red-social h2 {
     font-size: 1rem;
