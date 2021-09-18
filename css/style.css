@@ -429,11 +429,10 @@ p {
   .ponencia {
     grid-column: 1/-1;
     flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     grid-gap: 1rem;
     padding: 2rem 1rem;
   }
+
   .ponencia .img-ponente {
     width: 120px;
     height: 120px;
@@ -486,8 +485,6 @@ p {
     padding: 1rem 4rem;
   }
   .red-social i {
-    display: block;
-    padding: 0.5rem;
     font-size: 1.2rem;
   }
   .red-social h2 {
@@ -525,11 +522,17 @@ p {
   }
   /*fin banner*/
   /*ponencias*/
-  .ponencias .titulo h2 {
-    font-size: 1.3rem;
-  }
   .ponencias {
-    margin-top: 20px;
+    margin: 20px;
+    padding: 2rem 2rem;
+  }
+  .ponencias .titulo h2 {
+    font-size: 1rem;
+  }
+  .ponencia {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .ponencia .datos h2 {
     font-size: 1rem;
