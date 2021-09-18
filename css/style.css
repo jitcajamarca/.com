@@ -61,6 +61,10 @@ body {
   height: 100vh;
   position: relative;
   top: 4rem;
+  background-image: url("../img/spaeker-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .video {
   z-index: -1000;
@@ -109,7 +113,8 @@ body {
   font-size: 2rem;
   margin: 2.5rem 0;
 }
-.titulo h2 {
+.titulo h2,
+.auspiciadores h2 {
   color: #0089e0;
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -174,6 +179,11 @@ body {
 /*ponentes*/
 .ponentes {
   background-color: rgba(184, 185, 189, 0.5);
+  background-image: url("../img/homepage-one-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -190,6 +200,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e7e8e9c0;
+  border-radius: 0.3125rem;
 }
 .ponente .img-ponente {
   width: 200px;
@@ -523,25 +535,22 @@ p {
   /*fin banner*/
   /*ponencias*/
   .ponencias {
-    margin: 20px;
-    padding: 2rem 2rem;
+    padding: 1rem 1.5rem;
   }
-  .ponencias .titulo h2 {
-    font-size: 1rem;
-  }
+
   .ponencia {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
   }
   .ponencia .datos h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .ponencia .datos h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .datos p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   /*ponenetes*/
   .titulo h2 {
@@ -564,7 +573,7 @@ p {
     font-size: 1rem;
   }
   .ponente p {
-    font-size: 00.8rem;
+    font-size: 0.625rem;
   }
   /*team*/
   .equipo {
@@ -572,17 +581,21 @@ p {
     padding: 1rem;
   }
   .equipo .datos h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  .equipo .datos p {
+    font-size: 0.5rem;
   }
   .auspiciadores {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
   .auspiciadores h2 {
     font-size: 1.3rem;
   }
   .auspiciadores .img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   .footer {
     padding: 0;
