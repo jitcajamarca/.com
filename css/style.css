@@ -58,8 +58,6 @@ body {
 .banner {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  top: 4rem;
   background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,12 +75,13 @@ body {
 .banner-contenido h2 {
   color: #fff;
   font-size: 6rem;
-  text-shadow: 10px 2px #676768;
+  text-shadow: 10px 0px #5d5d63;
 }
 .banner-contenido h3 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 6px;
+  text-shadow: 4px 0px #5d5d63;
 }
 .banner-contenido p {
   width: 500px;
@@ -124,6 +123,7 @@ body {
   grid-gap: 1rem;
   grid-template-areas: "title title";
   padding: 2rem 8rem;
+  padding-bottom: 5rem;
 }
 .ponencias .titulo {
   grid-area: title;
@@ -224,7 +224,7 @@ p {
   background-image: url("../img/ponentes/Arturo-Deza.jpg");
 }
 .dp2 .img-ponente {
-  background-image: url("../img/ponentes/Miguel-Cano.png");
+  background-image: url("../img/ponentes/Miguel-Cano.jpg");
 }
 .dp3 .img-ponente {
   background-image: url("../img/ponentes/ManuelCastillo-Cara_rec.jpg");
@@ -383,11 +383,32 @@ p {
   color: #6893e8;
   font-size: 2.3rem;
 }
+.footer p {
+  text-align: center;
+  padding: 10px;
+  color: #c8c9ca;
+}
 /*responsive*/
 /*tablet*/
 @media screen and (max-width: 980px) {
   .titulo h2 {
     font-size: 2rem;
+  }
+  .banner-contenido h2 {
+    font-size: 4rem;
+    text-shadow: 6px 0px #5d5d63;
+  }
+  .banner-contenido h3 {
+    font-size: 1.7rem;
+    margin-bottom: 4px;
+    text-shadow: 3px 0px #5d5d63;
+  }
+  .banner-contenido p {
+    width: 500px;
+    color: #fff;
+    padding: 1rem;
+    padding-left: 0;
+    text-align: justify;
   }
   .ponencias {
     padding: 2rem 3rem;
@@ -479,6 +500,15 @@ p {
   }
   .banner-contenido h2 {
     font-size: 2rem;
+    text-shadow: 3px 0px #5d5d63;
+  }
+  .banner-contenido h3 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    text-shadow: 2px 0px #5d5d63;
+  }
+  .banner-contenido p {
+    width: 400px;
   }
   .banner-contenido a {
     font-size: 0.7rem;
@@ -575,7 +605,20 @@ p {
   /*baner*/
   .banner {
     top: 3rem;
-    height: 50vh;
+    height: 100vh;
+  }
+  .banner-contenido h2 {
+    font-size: 2rem;
+    text-shadow: 4px 0px #5d5d63;
+  }
+  .banner-contenido h3 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    text-shadow: 2px 0px #5d5d63;
+  }
+  .banner-contenido p {
+    width: 300px;
+    font-size: 0.7rem;
   }
   .video {
     height: 100vh;
