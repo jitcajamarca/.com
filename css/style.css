@@ -309,6 +309,7 @@ p {
   background-image: url("../img/team/roberto.jpg");
 }
 .i9 .img {
+  background-image: url("../img/team/teran.jpeg");
 }
 .i10 .img {
   background-image: url("../img/team/ErickRabanal.jpg");
@@ -322,7 +323,7 @@ p {
   width: 100%;
   padding: 2rem 5rem;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 .auspiciadores h2 {
   grid-column: 1/-1;
@@ -358,6 +359,9 @@ p {
 }
 .auspiciadores .aus6 {
   background-image: url("../img/auspiciadores/GARRIBASPLATA.png");
+}
+.auspiciadores .aus7 {
+  background-image: url("../img/auspiciadores/ISA.png");
 }
 /*footer*/
 .footer {
