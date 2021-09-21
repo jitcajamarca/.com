@@ -640,6 +640,7 @@ p {
   /*ponencias*/
   .ponencias {
     padding: 1rem 1.5rem;
+    padding-bottom: 4rem;
   }
 
   .ponencia {
@@ -683,6 +684,7 @@ p {
   .equipo {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
+    padding-bottom: 4rem;
   }
   .equipo .datos h2 {
     font-size: 0.8rem;
