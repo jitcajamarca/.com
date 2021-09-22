@@ -363,6 +363,17 @@ p {
 .auspiciadores .aus7 {
   background-image: url("../img/auspiciadores/ISA.png");
 }
+.auspiciadores .aus8 {
+  background-image: url("../img/auspiciadores/LOGOSISTEMAS-Small.png");
+}
+.auspiciadores .aus9 {
+  background-image: url("../img/auspiciadores/LOGO_CIP.png");
+}
+.auspiciadores a .img:hover {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+}
 /*footer*/
 .footer {
   background-color: #14284fda;
@@ -380,6 +391,7 @@ p {
 }
 .red-social i {
   display: inline-block;
+  margin: 0 1rem;
   padding: 0.5rem;
   font-size: 2rem;
 }
@@ -446,7 +458,7 @@ p {
   }
   /*auspiciadores*/
   .auspiciadores {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 1rem;
   }
 
@@ -522,7 +534,7 @@ p {
   /*ponencias*/
   .ponencias {
     margin-top: 2.5rem;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
   }
   .titulo h2 {
     font-size: 1.7rem;
@@ -579,7 +591,7 @@ p {
   }
   /*auspiciadores*/
   .auspiciadores {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .auspiciadores .img {
     width: 90px;
@@ -697,7 +709,7 @@ p {
     font-size: 0.5rem;
   }
   .auspiciadores {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0;
   }
   .auspiciadores h2 {
